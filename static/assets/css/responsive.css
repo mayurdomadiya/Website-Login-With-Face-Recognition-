@@ -1,0 +1,118 @@
+/*----------------------------------
+    LARGE LAYOUT: 1920px
+-----------------------------------*/
+
+@media only screen and (min-width: 1920px) {}
+
+/*----------------------------------
+    MEDIUM LAYOUT: 1280px
+-----------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .single-fun-fact {
+        letter-spacing: 1px;
+        padding-left: 80px;
+    }
+
+    .service-slider {
+        overflow: hidden;
+    }
+
+    .service-slider .text-icon-box {
+        padding: 80px 30px;
+    }
+
+    .progress-content {
+        padding-right: 50px;
+    }
+}
+
+/*----------------------------------
+    TABLET LAYOUT: 768px
+------------------------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .process-warapper-content .row > div:first-child {
+        margin-top: 0;
+    }
+
+    .process-warapper-content {
+        -webkit-transform: inherit;
+        transform: inherit;
+    }
+
+    .service-slider {
+        overflow: hidden;
+    }
+
+    .founder-detials.flex-v-center {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .founder-detials.flex-v-center > h4 span {
+        display: block;
+    }
+
+    .process-layer-letter {
+        font-size: 130px;
+        -webkit-transform: rotate(-21deg) !important;
+        transform: rotate(-21deg) !important;
+    }
+}
+
+/*----------------------------------
+    MOBILE LAYOUT: 320px
+-----------------------------------*/
+@media only screen and (max-width: 767px) {
+    .process-warapper-content .row > div:first-child {
+        margin-top: 0;
+    }
+
+    .process-warapper-content {
+        -webkit-transform: inherit;
+        transform: inherit;
+    }
+
+    .video-promo {
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .service-slider {
+        overflow: hidden;
+    }
+
+    .portfolio-slider.owl-carousel .owl-dots {
+        margin-top: 0;
+    }
+
+    .video-area {
+        padding: 150px 0;
+    }
+
+    .founder-detials.flex-v-center {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .founder-detials.flex-v-center > h4 span {
+        display: block;
+    }
+
+    .process-layer-letter {
+        font-size: 60px;
+        top: 20px;
+        -webkit-transform: rotate(-23deg) !important;
+        transform: rotate(-23deg) !important;
+    }
+}
+
+/*----------------------------------
+    WIDE MOBILE LAYOUT: 480px
+-----------------------------------*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}

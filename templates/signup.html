@@ -1,0 +1,54 @@
+<html>
+        
+
+        <head>
+                             
+        
+        </head>
+        
+        <body>
+                <div id='cont'>
+                                <form id="capture-form" method="Post">
+                                                User ID:<input type="number" name='id' id="uid"><br>
+                                                <input type="button" id="capture" value="Start Capturing Video" name="mqtt_publish"/>
+                                </form>
+                </div>
+
+        
+
+                
+                <script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+                <script>
+                        //    $('#bg').attr('src',"{{ url_for('video_feed') }}");
+                        $('#capture').on('click',(event) => {
+                                
+                                var id = $("input[name=id]").val();
+                                $('#capture-form').append('<br><img id="bg" name="bg" src="/capture/'+id+'" required><br>')
+                                
+                        });
+
+
+
+                        var interval = setInterval(()=>{
+                                $.ajax({
+                                type: 'GET',
+                                url: "{{url_for('capturedone')}}",
+                                success: function(data) {
+                                        console.log(data)
+                                        if(data.done){
+                                                
+                                        clearInterval(interval); 
+                                        alert('Signed up success, redirecting to home');
+                                        $('div').append('<p>Signed up success</p>');
+                                        setTimeout(window.location.href = "./",3000);
+                                        
+                                        }
+                                },
+                                });
+                        },1000);
+                </script>
+
+       </body>
+
+        
+</html>
